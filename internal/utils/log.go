@@ -20,6 +20,7 @@ func initLogger() log.Logger {
     return logger
 }
 
+// Get an instance of the logger and initialize it if it hasn't been already
 func GetLogger() log.Logger {
     once.Do(func() {
         logger = initLogger()
