@@ -8,6 +8,7 @@ import (
 	"github.com/go-git/go-git/v5"
 )
 
+// Open a git repository from a path. Thow an error if the path is not a directory.
 func GetRepository(path string) (*git.Repository, error) {
 	logger := utils.GetLogger()
 	cleanPath := filepath.Clean(path)
